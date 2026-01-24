@@ -1,0 +1,245 @@
+:root {
+  --bg: #040406;
+  --panel: #0b0f14;
+
+  --yellow: #fcee09;
+  --cyan: #22d3ee;
+  --magenta: #f472b6;
+
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b0f14, #040406);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND ---------- */
+#cyber-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed;
+  right: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nav a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  color: var(--cyan);
+  opacity: 1;
+}
+
+/* ---------- LAYOUT (DEFAULT) ---------- */
+main {
+  max-width: 960px;
+  margin: auto;
+  padding: 120px 40px;
+}
+
+.section {
+  margin-bottom: 120px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  color: var(--yellow);
+  text-shadow: 0 0 22px rgba(252,238,9,0.35);
+}
+
+.hero p {
+  color: var(--cyan);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--magenta);
+}
+
+/* ---------- TEXT ---------- */
+.section p {
+  line-height: 1.8;
+  max-width: 820px;
+}
+
+/* ---------- EDUCATION ---------- */
+.education {
+  margin-top: 20px;
+  padding-left: 14px;
+  border-left: 3px solid var(--yellow);
+}
+
+/* ---------- SKILLS ---------- */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-list span {
+  padding: 6px 12px;
+  border: 1px solid rgba(252,238,9,0.4);
+  color: var(--yellow);
+  font-size: 0.8rem;
+}
+
+/* ---------- LIST (Projects / Blog list) ---------- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.item {
+  padding-left: 18px;
+  border-left: 3px solid rgba(252,238,9,0.3);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  border-color: var(--cyan);
+  transform: translateX(6px);
+}
+
+.item-title {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.item-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+
+main:has(#blog-title) {
+  max-width: 1200px;
+}
+
+main:has(#blog-title) .detail-card {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- DETAIL CARD ---------- */
+.detail-card {
+  padding: 32px;
+  border-left: 4px solid var(--yellow);
+  background: linear-gradient(
+    180deg,
+    rgba(252,238,9,0.08),
+    rgba(0,0,0,0)
+  );
+  box-shadow: 0 0 45px rgba(252,238,9,0.18);
+}
+
+.detail-card h1 {
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.detail-meta {
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+
+.detail-desc {
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+
+/* ---------- TECH TAGS ---------- */
+.detail-tags span {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  color: var(--magenta);
+}
+
+/* ---------- LINKS ---------- */
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 6px rgba(34,211,238,0.7);
+}
+
+/* ---------- FOOTER ---------- */
+.cyber-footer {
+  margin-top: 120px;
+  padding: 40px 0 60px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  position: relative;
+}
+
+.cyber-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 260px;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(252,238,9,0.6),
+    transparent
+  );
+}
+
+.cyber-footer a {
+  font-size: 1.4rem;
+  color: var(--cyan);
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.cyber-footer a:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 12px rgba(34,211,238,0.9);
+}
