@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =========================================================
      CONFIG
      ========================================================= */
-const API = "";
+const API = "https://knw-me.vercel.app/";
 
   const $ = id => document.getElementById(id);
   const urlParams = new URLSearchParams(window.location.search);
