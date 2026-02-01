@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =========================================================
      CONFIG
      ========================================================= */
-const API = "https://knw-me.vercel.app/";
+const API = "https://knw-me.vercel.app";
+
+
 
   const $ = id => document.getElementById(id);
   const urlParams = new URLSearchParams(window.location.search);
@@ -100,7 +102,6 @@ if (canvas) {
         $("name").textContent = me.name;
         // $("role").textContent = me.role;
         // $("headline").textContent = me.headline;
-        $("bio").textContent = me.bio;
 
         $("education").textContent =
           `${me.education.degree}, ${me.education.institution} (${me.education.duration})`;
